@@ -70,9 +70,20 @@ skillCards.forEach((card, index) => {
 const projectCards = document.querySelectorAll('.project-card');
 projectCards.forEach((card, index) => {
     card.style.opacity = '0';
-    card.style.transform = 'translateY(30px)';
-    card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+    card.style.transform = 'translateY(50px) scale(0.95)';
+    card.style.transition = `all 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.15}s`;
     observer.observe(card);
+});
+
+// Enhanced project card hover effects
+projectCards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.zIndex = '10';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.zIndex = '1';
+    });
 });
 
 // Form submission handler (placeholder)
