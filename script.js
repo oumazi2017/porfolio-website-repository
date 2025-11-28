@@ -26,11 +26,11 @@ hamburger.addEventListener('click', () => {
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(15, 15, 30, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(108, 99, 255, 0.2)';
+        navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+        navbar.style.boxShadow = '0 2px 20px rgba(37, 99, 235, 0.25)';
     } else {
-        navbar.style.background = 'rgba(15, 15, 30, 0.95)';
-        navbar.style.boxShadow = '0 2px 20px rgba(108, 99, 255, 0.1)';
+        navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+        navbar.style.boxShadow = '0 2px 20px rgba(37, 99, 235, 0.15)';
     }
 });
 
