@@ -1,8 +1,10 @@
-# Portfolio Website - Data Analyst & ML Engineer
+# Portfolio Website - Ochuba Umazi Udeagha
 
-A modern, responsive portfolio website designed for data analysts and machine learning engineers. Built with HTML, CSS, and JavaScript, optimized for GitHub Pages.
+A modern, responsive portfolio website showcasing my work as a Data Analyst & Machine Learning Engineer. Built with HTML, CSS, and JavaScript, optimized for GitHub Pages.
 
-![Portfolio Preview](https://img.shields.io/badge/Status-Ready%20to%20Deploy-success)
+🌐 **Live Website:** [https://oumazi2017.github.io/porfolio-website-repository/](https://oumazi2017.github.io/porfolio-website-repository/)
+
+![Portfolio Preview](https://img.shields.io/badge/Status-Live-success)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
 ## 🌟 Features
@@ -10,21 +12,42 @@ A modern, responsive portfolio website designed for data analysts and machine le
 - **Responsive Design** - Fully responsive layout that works on all devices
 - **Modern Dark Theme** - Professional design with purple/pink gradient accents
 - **Smooth Animations** - Scroll animations, hover effects, and parallax scrolling
-- **Project Showcase** - Display up to 6 featured projects with descriptions
+- **Featured Projects** - Showcasing American Liberty Homecare and House Price Prediction System
 - **Skills Section** - Organized by categories (Data Analysis, ML, Visualization, Tools)
-- **Contact Form** - Ready for backend integration
+- **Contact Information** - Email, location, and phone details
 - **Mobile-Friendly Navigation** - Hamburger menu for mobile devices
 - **SEO Optimized** - Meta tags and semantic HTML structure
+- **Professional Design** - Enhanced project cards with badges and hover effects
+
+## 🚀 Featured Projects
+
+### 1. American Liberty Homecare
+A comprehensive healthcare management website featuring service information, appointment scheduling, and patient resources.
+- **Live Demo:** [https://oumazi2017.github.io/American-liberty-homecare/](https://oumazi2017.github.io/American-liberty-homecare/)
+- **GitHub:** [https://github.com/oumazi2017/American-liberty-homecare](https://github.com/oumazi2017/American-liberty-homecare)
+
+### 2. House Price Prediction System
+An advanced machine learning model using Streamlit to predict house prices with interactive dashboard and real-time predictions.
+- **Live App:** [https://myhouseprediction.streamlit.app/](https://myhouseprediction.streamlit.app/)
+- **GitHub:** [https://github.com/oumazi2017/Streamlit-House-Prediction](https://github.com/oumazi2017/Streamlit-House-Prediction)
 
 ## 📁 File Structure
 
 ```
 porfolio-website-repository/
-├── index.html          # Main HTML structure
+├── index.html          # Main portfolio page
+├── about.html          # Detailed about page
 ├── styles.css          # All styling and animations
 ├── script.js           # Interactive functionality
 └── README.md           # Documentation (this file)
 ```
+
+## 🔗 Connect With Me
+
+- **GitHub:** [https://github.com/oumazi2017](https://github.com/oumazi2017)
+- **LinkedIn:** [https://www.linkedin.com/in/ebba-o-udeagha/](https://www.linkedin.com/in/ebba-o-udeagha/)
+- **Email:** oumazi2017@gmail.com
+- **Portfolio:** [https://oumazi2017.github.io/porfolio-website-repository/](https://oumazi2017.github.io/porfolio-website-repository/)
 
 ## 🚀 Quick Start
 
