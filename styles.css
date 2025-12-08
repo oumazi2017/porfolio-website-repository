@@ -161,6 +161,29 @@ section {
     max-width: 500px;
 }
 
+.hero-stats-inline {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.hero-stats-inline span {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 25px;
+    border: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+.hero-stats-inline i {
+    color: var(--accent-color);
+}
+
 .hero-buttons {
     display: flex;
     gap: 1rem;
@@ -337,6 +360,83 @@ section {
 .profile-picture:hover {
     transform: scale(1.05);
     box-shadow: 0 25px 70px rgba(37, 99, 235, 0.6);
+}
+
+/* ==================== SKILLS SECTION ==================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* ==================== METRICS SECTION ==================== */
+.metrics {
+    padding: 80px 0;
+    background: var(--dark-bg);
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.metric-card {
+    background: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.metric-card:hover::before {
+    left: 100%;
+}
+
+.metric-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 50px rgba(37, 99, 235, 0.3);
+}
+
+.metric-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.metric-number {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: var(--gradient-3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.metric-card p {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    margin: 0;
 }
 
 /* ==================== SKILLS SECTION ==================== */
@@ -528,6 +628,29 @@ section {
     transform: translateY(-2px);
 }
 
+.project-impact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+    padding: 15px;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 10px;
+    border-left: 3px solid var(--accent-color);
+}
+
+.project-impact span {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-impact i {
+    color: var(--accent-color);
+}
+
 .project-links {
     display: flex;
     gap: 20px;
@@ -712,6 +835,10 @@ section {
         grid-template-columns: repeat(3, 1fr);
     }
     
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     .contact-content {
         grid-template-columns: 1fr;
     }
@@ -750,7 +877,16 @@ section {
         flex-direction: column;
     }
     
+    .hero-stats-inline {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
     .about-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .metrics-grid {
         grid-template-columns: 1fr;
     }
     

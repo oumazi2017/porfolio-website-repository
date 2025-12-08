@@ -196,4 +196,42 @@ if (statsSection) {
     statsObserver.observe(statsSection);
 }
 
+// Animated counter for metrics section
+const metricNumbers = document.querySelectorAll('.metric-number');
+const metricsSection = document.querySelector('.metrics');
+
+const animateMetric = (element, target) => {
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+    
+    const updateMetric = () => {
+        current += increment;
+        if (current < target) {
+            element.textContent = Math.floor(current);
+            requestAnimationFrame(updateMetric);
+        } else {
+            element.textContent = target;
+        }
+    };
+    
+    updateMetric();
+};
+
+const metricsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            metricNumbers.forEach(metric => {
+                const target = parseInt(metric.getAttribute('data-target'));
+                animateMetric(metric, target);
+            });
+            metricsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+if (metricsSection) {
+    metricsObserver.observe(metricsSection);
+}
+
 console.log('Portfolio website loaded successfully! 🚀');
