@@ -49,7 +49,21 @@ document.addEventListener('DOMContentLoaded', function(){
     notifications: ''  // e.g. 'https://api.example.com/notify/subscribe'
   };
 
-  // Attach handlers for demo buttons
+  // Demo modal helpers
+  const demoModal = document.getElementById('demoModal');
+  const demoBody = document.getElementById('demoBody');
+  const demoClose = document.getElementById('demoClose');
+  function showDemo(title, steps){
+    if(!demoModal || !demoBody) { alert(title+" - " + steps.map(s=>s.text).join('\n')); return; }
+    demoBody.innerHTML = `<h3>${title}</h3>` + steps.map(s=>`<div class="demo-step"><h4>${s.title}</h4><p>${s.text}</p></div>`).join('');
+    demoModal.classList.add('show');
+    demoModal.setAttribute('aria-hidden','false');
+  }
+  function closeDemo(){ if(demoModal){ demoModal.classList.remove('show'); demoModal.setAttribute('aria-hidden','true'); demoBody.innerHTML=''; }}
+  if(demoClose) demoClose.addEventListener('click', closeDemo);
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeDemo(); });
+
+  // Attach handlers for demo buttons in the features cards
   document.querySelectorAll('.card .btn[data-action]').forEach(btn => {
     btn.addEventListener('click', async function(){
       const action = this.getAttribute('data-action');
@@ -58,10 +72,15 @@ document.addEventListener('DOMContentLoaded', function(){
           try{
             const res = await fetch(API.passwordReset, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({email:'demo@example.com'})});
             const json = await res.json();
-            alert('Password reset: ' + (json.message || JSON.stringify(json)));
-          }catch(err){alert('Password reset failed: '+err.message)}
+            showDemo('Password reset', [{title:'Response', text: json.message || JSON.stringify(json)}]);
+          }catch(err){showDemo('Password reset', [{title:'Error', text: err.message}])}
         }else{
-          alert('Password reset demo (no API configured)');
+          // simulate password reset flow
+          showDemo('Password Reset Demo', [
+            {title:'Step 1', text:'User clicks "Forgot Password"'},
+            {title:'Step 2', text:'System sends secure reset link to user email'},
+            {title:'Step 3', text:'User sets new password and is redirected to login'}
+          ]);
         }
       }
       if(action === 'orderTracking'){
@@ -69,10 +88,14 @@ document.addEventListener('DOMContentLoaded', function(){
           try{
             const res = await fetch(API.orderTracking+'?orderId=12345');
             const json = await res.json();
-            alert('Order status: ' + (json.status || JSON.stringify(json)));
-          }catch(err){alert('Order tracking failed: '+err.message)}
+            showDemo('Order Tracking', [{title:'Status', text: json.status || JSON.stringify(json)}]);
+          }catch(err){showDemo('Order Tracking', [{title:'Error', text: err.message}])}
         }else{
-          alert('Order tracking demo (no API configured)');
+          showDemo('Order Tracking Demo', [
+            {title:'Order Placed', text:'Your order #12345 has been placed.'},
+            {title:'Shipped', text:'Your order is on the way.'},
+            {title:'Delivered', text:'Order delivered. Enjoy!'}
+          ]);
         }
       }
       if(action === 'notifications'){
@@ -80,10 +103,12 @@ document.addEventListener('DOMContentLoaded', function(){
           try{
             const res = await fetch(API.notifications, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({device:'demo', subscribe:true})});
             const json = await res.json();
-            alert('Subscribed: ' + (json.message || JSON.stringify(json)));
-          }catch(err){alert('Subscription failed: '+err.message)}
+            showDemo('Notifications', [{title:'Response', text: json.message || JSON.stringify(json)}]);
+          }catch(err){showDemo('Notifications', [{title:'Error', text: err.message}])}
         }else{
-          alert('Notifications demo (no API configured)');
+          showDemo('Notifications Demo', [
+            {title:'Subscribed', text:'You will receive order status updates via push notifications.'}
+          ]);
         }
       }
     });

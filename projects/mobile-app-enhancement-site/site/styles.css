@@ -24,6 +24,15 @@ body{font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue'
 .card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 4px 14px rgba(16,24,40,0.06)}
 .site-footer{padding:20px 0;text-align:center;color:var(--muted);margin-top:40px}
 
+/* Demo modal */
+.demo-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.6);z-index:60}
+.demo-modal.show{display:flex}
+.demo-modal-content{background:#fff;padding:20px;border-radius:10px;max-width:720px;width:94%;box-shadow:0 10px 40px rgba(2,6,23,0.4);position:relative}
+.demo-close{position:absolute;right:12px;top:8px;border:0;background:none;font-size:22px;cursor:pointer}
+.demo-step{padding:12px;border-left:4px solid var(--accent);margin:8px 0}
+.demo-step h4{margin:0 0 6px}
+.demo-step p{margin:0}
+
 /* Responsive */
 @media (max-width:760px){
   .nav-toggle{display:inline-block}
