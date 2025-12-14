@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mobile App Enhancement — Project</title>
+  <link rel="stylesheet" href="./site/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#home">Mobile App</a>
+      <nav class="main-nav" id="mainNav">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false">☰</button>
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#docs">Docs</a></li>
+          <li class="dropdown" id="foodDropdown">
+            <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Food ▾</button>
+            <ul class="dropmenu" aria-label="Food menu">
+              <li><a href="#pizza">Pizza</a></li>
+              <li><a href="#sushi">Sushi</a></li>
+              <li><a href="#salads">Salads</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero container">
+      <h1>Mobile App Enhancement Project</h1>
+      <p>Security, order-tracking and real-time notifications — delivered with Agile practices.</p>
+      <p><a class="btn" href="#features">See Features</a></p>
+    </section>
+
+    <section id="features" class="container">
+      <h2>Features</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Secure Password Reset</h3>
+          <p>User-friendly, token-based reset flow with expiry and validation.</p>
+          <button class="btn" data-action="passwordReset">Try demo</button>
+        </article>
+        <article class="card">
+          <h3>Order Tracking</h3>
+          <p>End-to-end tracking with status timeline and estimated delivery.</p>
+          <button class="btn" data-action="orderTracking">View tracking</button>
+        </article>
+        <article class="card">
+          <h3>Real-Time Notifications</h3>
+          <p>Push and in-app notifications for order updates and messaging.</p>
+          <button class="btn" data-action="notifications">Subscribe</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="docs" class="container">
+      <h2>Project Docs</h2>
+      <ul>
+        <li><a href="/docs/PROJECT_CHARTER.md">Project Charter</a></li>
+        <li><a href="/docs/USER_STORIES.md">User Stories</a></li>
+        <li><a href="/docs/AGILE_DELIVERY.md">Agile Delivery</a></li>
+      </ul>
+    </section>
+
+    <section id="pizza" class="container">
+      <h2>Pizza</h2>
+      <p>Sample dropdown destination: Pizza menu details.</p>
+    </section>
+
+    <section id="sushi" class="container">
+      <h2>Sushi</h2>
+      <p>Sample dropdown destination: Sushi menu details.</p>
+    </section>
+
+    <section id="salads" class="container">
+      <h2>Salads</h2>
+      <p>Sample dropdown destination: Salads menu details.</p>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Contact</h2>
+      <p>For demos and collaboration, open an issue or contact the repo owner.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 Mobile App Enhancement Project</div>
+  </footer>
+
+  <script src="./site/script.js"></script>
+</body>
+</html>
