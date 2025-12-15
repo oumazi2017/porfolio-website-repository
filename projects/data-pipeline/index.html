@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Real-Time Data Pipeline Architecture - Kafka, Spark, PostgreSQL streaming">
+    <title>Real-Time Data Pipeline</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="logo" href="#home">DataPipeline</a>
+            <button id="navToggle" class="nav-toggle">☰</button>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#stream">Stream Monitor</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Real-Time Data Pipeline</h1>
+            <p>Sub-second latency, 10M+ events/day, Apache Kafka + Spark + PostgreSQL</p>
+            <button class="btn btn-primary" data-action="startDemo">Start Live Demo</button>
+        </div>
+    </section>
+
+    <!-- Architecture -->
+    <section id="architecture" class="architecture">
+        <div class="container">
+            <h2>System Architecture</h2>
+            <div class="arch-diagram">
+                <div class="arch-component">
+                    <div class="arch-icon">📱</div>
+                    <h3>Data Sources</h3>
+                    <p>Mobile apps, web, sensors</p>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-component">
+                    <div class="arch-icon">🔄</div>
+                    <h3>Kafka Broker</h3>
+                    <p>Real-time event streaming</p>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-component">
+                    <div class="arch-icon">⚡</div>
+                    <h3>Apache Spark</h3>
+                    <p>Stream processing</p>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-component">
+                    <div class="arch-icon">🗄️</div>
+                    <h3>PostgreSQL</h3>
+                    <p>Real-time database</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stream Monitor -->
+    <section id="stream" class="stream-monitor">
+        <div class="container">
+            <h2>Live Stream Monitor</h2>
+            <div class="monitor-controls">
+                <button class="demo-btn" data-action="startStream">Start Stream</button>
+                <button class="demo-btn" data-action="stopStream">Stop Stream</button>
+                <button class="demo-btn" data-action="viewMetrics">Stream Metrics</button>
+                <button class="demo-btn" data-action="throughputAnalysis">Throughput Analysis</button>
+            </div>
+            <div class="stream-display">
+                <div class="stream-header">
+                    <span>Event #</span>
+                    <span>Timestamp</span>
+                    <span>Event Type</span>
+                    <span>Latency</span>
+                </div>
+                <div id="streamEvents" class="stream-events"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics -->
+    <section id="analytics" class="analytics">
+        <div class="container">
+            <h2>Pipeline Analytics</h2>
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <h3>Events/Second</h3>
+                    <p id="eventsPerSec">115,741</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Avg Latency</h3>
+                    <p id="avgLatency">245ms</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>P99 Latency</h3>
+                    <p id="p99Latency">892ms</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Success Rate</h3>
+                    <p id="successRate">99.97%</p>
+                </div>
+            </div>
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>Event Throughput (Events/sec)</h3>
+                    <canvas id="throughputChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Latency Distribution (ms)</h3>
+                    <canvas id="latencyChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Processing by Event Type</h3>
+                    <canvas id="eventTypeChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Error Rate Trend</h3>
+                    <canvas id="errorChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button id="modalClose" class="modal-close">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Real-Time Data Pipeline. Built with Apache Kafka, Spark, and PostgreSQL.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

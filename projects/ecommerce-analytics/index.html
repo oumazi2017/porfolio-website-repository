@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="E-Commerce Analytics Platform - ML-powered customer insights and ROI optimization">
+    <title>E-Commerce Analytics Platform</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="logo" href="#home">Analytics</a>
+            <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#metrics">Metrics</a></li>
+                <li><a href="#predictions">Predictions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>E-Commerce Analytics Platform</h1>
+            <p>ML-powered customer insights, churn prediction, and conversion optimization</p>
+            <button class="btn btn-primary" data-action="startDemo">Start Interactive Demo</button>
+        </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="dashboard">
+        <div class="container">
+            <h2>Real-Time Dashboard</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Total Revenue</h3>
+                    <p class="metric-value">$2.4M</p>
+                    <p class="metric-change">↑ 35% YoY</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Conversion Rate</h3>
+                    <p class="metric-value">4.8%</p>
+                    <p class="metric-change">↑ 1.2% from ML</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Customer Churn</h3>
+                    <p class="metric-value">12.3%</p>
+                    <p class="metric-change">↓ Predicted & Reduced</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Avg Order Value</h3>
+                    <p class="metric-value">$156</p>
+                    <p class="metric-change">↑ 22% ML Optimization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section id="metrics" class="metrics">
+        <div class="container">
+            <h2>Analytics & Insights</h2>
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>Monthly Revenue Trend</h3>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Customer Segmentation</h3>
+                    <canvas id="segmentChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Product Performance</h3>
+                    <canvas id="productChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Conversion Funnel</h3>
+                    <canvas id="funnelChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Predictions Section -->
+    <section id="predictions" class="predictions">
+        <div class="container">
+            <h2>ML Predictions & Recommendations</h2>
+            <div class="prediction-controls">
+                <button class="demo-btn" data-action="predictChurn">Predict Churn Risk</button>
+                <button class="demo-btn" data-action="recommendProducts">Product Recommendations</button>
+                <button class="demo-btn" data-action="priceOptimization">Price Optimization</button>
+                <button class="demo-btn" data-action="segmentAnalysis">Customer Segmentation</button>
+            </div>
+            <div id="predictionResults" class="prediction-results"></div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button id="modalClose" class="modal-close">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 E-Commerce Analytics Platform. Built with Python, TensorFlow, and ML expertise.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
