@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mobile App Enhancement Project - Interactive Demo">
+    <title>Mobile App Enhancement Project | Interactive Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Mobile App Enhancement</span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#tech">Tech Stack</a></li>
+            </ul>
+            <button id="navToggle" class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Mobile App Enhancement Project</h1>
+                <p class="hero-subtitle">Delivering High-Impact Features with Agile Methodology</p>
+                <p class="hero-description">
+                    A strategic mobile app upgrade focused on enhancing security, improving user engagement, 
+                    and providing real-time order visibility through secure password reset, advanced tracking, 
+                    and intelligent notifications.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>3</h3>
+                        <p>Key Features</p>
+                    </div>
+                    <div class="stat">
+                        <h3>15%</h3>
+                        <p>Engagement Increase</p>
+                    </div>
+                    <div class="stat">
+                        <h3>40%</h3>
+                        <p>Support Reduction</p>
+                    </div>
+                    <div class="stat">
+                        <h3>2 Weeks</h3>
+                        <p>Delivery Time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview Section -->
+    <section class="overview">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Project Goal</h3>
+                    <p>Enhance an existing mobile application to improve user experience, security, and customer engagement while balancing business demands with realistic Agile delivery timelines.</p>
+                </div>
+                <div class="overview-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Stakeholders</h3>
+                    <p>Collaborated with Product, Marketing, and Engineering teams to gather requirements, manage scope, and ensure successful delivery aligned with team capacity.</p>
+                </div>
+                <div class="overview-card">
+                    <i class="fas fa-tasks"></i>
+                    <h3>Agile Delivery</h3>
+                    <p>Managed sprints using Jira, facilitated backlog grooming sessions, converted business requirements into user stories, and maintained sprint velocity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Features Delivered</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock-open"></i>
+                    </div>
+                    <h3>Password Reset</h3>
+                    <p>Enhanced account security with a streamlined password reset workflow. Users can securely reset forgotten passwords via email verification with confirmation notifications.</p>
+                    <div class="feature-metrics">
+                        <span><i class="fas fa-shield-alt"></i> Security Enhanced</span>
+                        <span><i class="fas fa-check-circle"></i> 100% Secure</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Order Tracking</h3>
+                    <p>Real-time visibility into customer purchases with step-by-step order status updates. Track shipments from processing to delivery with estimated arrival times and carrier information.</p>
+                    <div class="feature-metrics">
+                        <span><i class="fas fa-eye"></i> Real-Time Updates</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Live Tracking</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Push Notifications</h3>
+                    <p>Intelligent push notifications for order updates, promotional offers, and critical account alerts. Customizable notification preferences with opt-in/opt-out controls.</p>
+                    <div class="feature-metrics">
+                        <span><i class="fas fa-envelope"></i> Smart Alerts</span>
+                        <span><i class="fas fa-sliders-h"></i> Customizable</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <h2>Interactive Demo</h2>
+            <p class="demo-subtitle">Experience the enhanced mobile app features in action</p>
+
+            <div class="demo-wrapper">
+                <!-- Mobile Phone Frame -->
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen" id="phoneScreen">
+                        <!-- Home Screen -->
+                        <div class="screen-page active" id="homeScreen">
+                            <div class="screen-header">
+                                <span class="time">9:41</span>
+                                <span class="carrier">Verizon</span>
+                                <span class="battery">100%</span>
+                            </div>
+                            <div class="screen-content">
+                                <h2>Welcome Back!</h2>
+                                <p class="greeting">John Doe</p>
+                                <div class="menu-buttons">
+                                    <button class="menu-btn" data-action="showReset">
+                                        <i class="fas fa-lock-open"></i>
+                                        <span>Password Reset</span>
+                                    </button>
+                                    <button class="menu-btn" data-action="showTracking">
+                                        <i class="fas fa-box"></i>
+                                        <span>Track Order</span>
+                                    </button>
+                                    <button class="menu-btn" data-action="showNotifications">
+                                        <i class="fas fa-bell"></i>
+                                        <span>Notifications</span>
+                                    </button>
+                                    <button class="menu-btn" data-action="showSettings">
+                                        <i class="fas fa-cog"></i>
+                                        <span>Settings</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Password Reset Screen -->
+                        <div class="screen-page" id="resetScreen">
+                            <div class="screen-header">
+                                <button class="back-btn" data-action="goHome"><i class="fas fa-chevron-left"></i></button>
+                                <h3>Password Reset</h3>
+                            </div>
+                            <div class="screen-content">
+                                <div class="form-section">
+                                    <label>Email Address</label>
+                                    <input type="email" placeholder="john@example.com" value="john@example.com">
+                                    <button class="btn-primary" data-action="sendReset">Send Reset Link</button>
+                                </div>
+                                <div id="resetStatus" class="status-message"></div>
+                            </div>
+                        </div>
+
+                        <!-- Order Tracking Screen -->
+                        <div class="screen-page" id="trackingScreen">
+                            <div class="screen-header">
+                                <button class="back-btn" data-action="goHome"><i class="fas fa-chevron-left"></i></button>
+                                <h3>Order #12847</h3>
+                            </div>
+                            <div class="screen-content">
+                                <div class="tracking-header">
+                                    <p class="tracking-status">In Transit</p>
+                                    <p class="tracking-estimate">Est. Delivery: Tomorrow</p>
+                                </div>
+                                <div class="tracking-timeline">
+                                    <div class="timeline-step completed">
+                                        <div class="step-dot"></div>
+                                        <div class="step-info">
+                                            <h4>Order Confirmed</h4>
+                                            <p>Dec 12, 2:30 PM</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-step completed">
+                                        <div class="step-dot"></div>
+                                        <div class="step-info">
+                                            <h4>Processing</h4>
+                                            <p>Dec 12, 4:15 PM</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-step completed">
+                                        <div class="step-dot"></div>
+                                        <div class="step-info">
+                                            <h4>Shipped</h4>
+                                            <p>Dec 13, 9:45 AM</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-step active">
+                                        <div class="step-dot"></div>
+                                        <div class="step-info">
+                                            <h4>In Transit</h4>
+                                            <p>With FedEx • 45 miles away</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-step">
+                                        <div class="step-dot"></div>
+                                        <div class="step-info">
+                                            <h4>Delivered</h4>
+                                            <p>Expected tomorrow</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-primary" data-action="updateTracking">Update Status</button>
+                            </div>
+                        </div>
+
+                        <!-- Notifications Screen -->
+                        <div class="screen-page" id="notificationsScreen">
+                            <div class="screen-header">
+                                <button class="back-btn" data-action="goHome"><i class="fas fa-chevron-left"></i></button>
+                                <h3>Notifications</h3>
+                            </div>
+                            <div class="screen-content notifications-list" id="notificationsList">
+                                <div class="notification-item unread">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-box"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <h4>Order Shipped</h4>
+                                        <p>Your order #12847 is on the way!</p>
+                                        <span class="notification-time">2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item unread">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-percent"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <h4>Special Offer</h4>
+                                        <p>Get 20% off on your next purchase!</p>
+                                        <span class="notification-time">5 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item">
+                                    <div class="notification-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="notification-content">
+                                        <h4>Password Changed</h4>
+                                        <p>Your account password was successfully updated</p>
+                                        <span class="notification-time">1 day ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn-primary" data-action="clearNotifications">Clear All</button>
+                        </div>
+
+                        <!-- Settings Screen -->
+                        <div class="screen-page" id="settingsScreen">
+                            <div class="screen-header">
+                                <button class="back-btn" data-action="goHome"><i class="fas fa-chevron-left"></i></button>
+                                <h3>Settings</h3>
+                            </div>
+                            <div class="screen-content settings-list">
+                                <div class="setting-item">
+                                    <div>
+                                        <h4>Order Updates</h4>
+                                        <p>Notifications about shipments</p>
+                                    </div>
+                                    <label class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <div>
+                                        <h4>Promotions</h4>
+                                        <p>Special offers and discounts</p>
+                                    </div>
+                                    <label class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <div>
+                                        <h4>Account Alerts</h4>
+                                        <p>Security and password changes</p>
+                                    </div>
+                                    <label class="toggle">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-home"></div>
+                </div>
+
+                <!-- Demo Controls -->
+                <div class="demo-controls">
+                    <h3>Interactive Features</h3>
+                    <div class="controls-list">
+                        <button class="control-btn" data-action="showReset">
+                            <i class="fas fa-lock-open"></i>
+                            <span>Password Reset</span>
+                        </button>
+                        <button class="control-btn" data-action="showTracking">
+                            <i class="fas fa-box"></i>
+                            <span>Order Tracking</span>
+                        </button>
+                        <button class="control-btn" data-action="showNotifications">
+                            <i class="fas fa-bell"></i>
+                            <span>Notifications</span>
+                        </button>
+                        <button class="control-btn" data-action="showSettings">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </button>
+                        <button class="control-btn" data-action="goHome">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </button>
+                    </div>
+                    <div class="feature-desc" id="featureDescription">
+                        <p>Select a feature to explore</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="results">
+        <div class="container">
+            <h2>Project Outcomes</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>15% Engagement Increase</h3>
+                    <p>Enhanced features led to increased app usage and customer interaction with the platform.</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>40% Support Reduction</h3>
+                    <p>Real-time tracking and notifications reduced customer support requests significantly.</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Improved Customer Trust</h3>
+                    <p>Secure password reset and real-time visibility enhanced customer confidence and satisfaction.</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>On-Time Delivery</h3>
+                    <p>Delivered all features within 2-week sprint without scope creep using Agile best practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech" class="tech-stack">
+        <div class="container">
+            <h2>Technology & Methodology</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>React Native / Swift / Kotlin</li>
+                        <li>UI/UX Design</li>
+                        <li>Push Notifications SDK</li>
+                        <li>Real-time Updates</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>REST APIs</li>
+                        <li>Authentication & Security</li>
+                        <li>Order Management System</li>
+                        <li>Database Queries</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h3>Agile Tools</h3>
+                    <ul>
+                        <li>Jira for Backlog</li>
+                        <li>Sprint Planning</li>
+                        <li>Backlog Grooming</li>
+                        <li>Stakeholder Collaboration</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h3>Methodologies</h3>
+                    <ul>
+                        <li>Scrum Framework</li>
+                        <li>User Story Creation</li>
+                        <li>Requirements Analysis</li>
+                        <li>Acceptance Criteria</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Want to Discuss This Project?</h2>
+            <p>I'd love to talk about how Agile delivery and strategic feature development can drive your mobile app's success.</p>
+            <a href="mailto:oumazi2017@gmail.com" class="btn btn-large">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button id="modalClose" class="modal-close">×</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
